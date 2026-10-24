@@ -1,0 +1,363 @@
+/* ==========================================================================
+   THE FRESH FLOURS — DESIGN SYSTEM & TOKENS
+   Aesthetic: Warm cream & off-white, deep forest green, golden grain accents
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --color-cream-50: #FCFAF6;
+  --color-cream-100: #F7F3EB;
+  --color-cream-200: #EFE8DA;
+  --color-cream-300: #E2D7C3;
+  
+  --color-forest-900: #12281E;
+  --color-forest-800: #1A392B;
+  --color-forest-700: #234D3A;
+  --color-forest-600: #2D614A;
+  --color-forest-50: #EDF5F1;
+  
+  --color-wheat-600: #A8762A;
+  --color-wheat-500: #C4933E;
+  --color-wheat-400: #DCB062;
+  --color-wheat-100: #FBF4E6;
+  
+  --color-terracotta: #A44C27;
+  --color-terracotta-light: #FBF0EB;
+
+  --color-earth-900: #2B241E;
+  --color-earth-800: #3E352D;
+  --color-earth-700: #54493F;
+  --color-earth-500: #7E7063;
+  --color-earth-400: #A89B8F;
+  --color-earth-200: #D8D0C5;
+  --color-earth-100: #EDE7DC;
+
+  /* Semantic Variables */
+  --bg-body: var(--color-cream-50);
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-subtle: var(--color-cream-100);
+  --bg-accent-subtle: var(--color-forest-50);
+
+  --text-primary: var(--color-earth-900);
+  --text-secondary: var(--color-earth-700);
+  --text-muted: var(--color-earth-500);
+  --text-inverse: #FFFFFF;
+  --text-brand: var(--color-forest-800);
+
+  --border-subtle: #E6DED0;
+  --border-medium: #D1C5B3;
+  --border-strong: var(--color-forest-800);
+
+  --primary: var(--color-forest-800);
+  --primary-hover: var(--color-forest-900);
+  --primary-light: var(--color-forest-700);
+  
+  --accent-gold: var(--color-wheat-500);
+  --accent-gold-hover: var(--color-wheat-600);
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-indic: 'Mukta', sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(39, 33, 29, 0.04), 0 1px 2px rgba(39, 33, 29, 0.02);
+  --shadow-md: 0 4px 12px rgba(39, 33, 29, 0.06), 0 1px 3px rgba(39, 33, 29, 0.04);
+  --shadow-lg: 0 12px 28px rgba(39, 33, 29, 0.08), 0 4px 10px rgba(39, 33, 29, 0.04);
+  --shadow-xl: 0 20px 40px rgba(39, 33, 29, 0.12), 0 8px 16px rgba(39, 33, 29, 0.06);
+  --shadow-card: 0 2px 8px rgba(39, 33, 29, 0.05);
+  --shadow-card-hover: 0 14px 30px rgba(26, 57, 43, 0.12);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-earth-200);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-700);
+}
+
+/* Container Utility */
+.app-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(26, 57, 43, 0.2);
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 57, 43, 0.28);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+  background-color: var(--color-cream-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(196, 147, 62, 0.25);
+}
+.btn-gold:hover {
+  background-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--color-wheat-600);
+  border: 1.5px solid var(--accent-gold);
+}
+.btn-outline-gold:hover {
+  background-color: var(--color-wheat-100);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+/* Badge & Pill utilities */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.badge-green {
+  background-color: var(--color-forest-50);
+  color: var(--color-forest-800);
+  border: 1px solid rgba(26, 57, 43, 0.15);
+}
+
+.badge-gold {
+  background-color: var(--color-wheat-100);
+  color: var(--color-wheat-600);
+  border: 1px solid rgba(196, 147, 62, 0.25);
+}
+
+.badge-pickup {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+.badge-shippable {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 350ms ease forwards;
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 223, 212, 0.7);
+}
+
+/* Section styling */
+.section-padding {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Focus Visible */
+*:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 2px;
+}

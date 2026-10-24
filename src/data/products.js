@@ -1,0 +1,908 @@
+export const CATEGORIES = [
+  { id: 'all', label: 'All Products', gu: 'બધા ઉત્પાદનો', hi: 'सभी उत्पाद', icon: 'Sparkles' },
+  { id: 'flours', label: 'Fresh Flours', gu: 'તાજા લોટ', hi: 'ताज़ा आटा', icon: 'Wheat' },
+  { id: 'grains', label: 'Whole Grains', gu: 'આખા અનાજ', hi: 'साबुत अनाज', icon: 'CircleDot' },
+  { id: 'snacks', label: 'Crispy Snacks', gu: 'નાસ્તા', hi: 'नाश्ता', icon: 'Cookie' },
+  { id: 'mamra', label: 'Puffed Mamra', gu: 'મમરા', hi: 'ममरा', icon: 'Flame' },
+];
+
+export const PRODUCTS = [
+  // ================= FLOURS =================
+  {
+    id: 'bajri-flour',
+    slug: 'bajri-flour',
+    name: 'Bajri Flour',
+    gujaratiName: 'બાજરીનો લોટ',
+    hindiName: 'बाजरा का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 11.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 11.00, weightLb: 4 }
+    ],
+    image: '/products/bajri-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Freshly stoneground pearl millet flour. Milled daily from clean, whole pearl millet grain. Gives authentic aroma and sweetness to traditional Gujarati rotla and bhakri.',
+    highlights: [
+      'Gluten-free traditional ancient grain',
+      'High in dietary fiber, iron & magnesium',
+      'Stone-milled slowly to protect delicate grain oils',
+      'No preservatives, additives, or bleaching agents'
+    ],
+    culinaryUses: 'Traditional Gujarati Bajri no Rotlo served with white butter (makhan), jaggery (gor), and ringna no olo (baingan bharta).',
+    shelfLife: 'Best within 6 to 8 weeks. Keep in a dry airtight container or refrigerate.',
+    millingType: 'Medium-fine stoneground'
+  },
+  {
+    id: 'juwar-flour',
+    slug: 'juwar-flour',
+    name: 'Juwar Flour',
+    gujaratiName: 'જુવારનો લોટ',
+    hindiName: 'ज्वार का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 11.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 11.00, weightLb: 4 }
+    ],
+    image: '/products/juwar-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Fine stone-milled white sorghum (juwar) flour. Naturally gluten-free, mild, naturally sweet taste, milled fresh every morning in the USA.',
+    highlights: [
+      '100% Sorghum grain, stone-milled',
+      'Digestive-friendly, low glycemic index',
+      'Milled fresh on order',
+      'Pure single-ingredient flour'
+    ],
+    culinaryUses: 'Tender Juwar rotla / jowar bhakri, thalipeeth, and savory porridge.',
+    shelfLife: 'Best within 8 weeks.',
+    millingType: 'Fine stoneground'
+  },
+  {
+    id: 'chapati-flour',
+    slug: 'chapati-flour',
+    name: 'Chapati Flour',
+    gujaratiName: 'રોટલીનો લોટ',
+    hindiName: 'चपाती का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 8.00,
+    size: '5 lb',
+    weightLb: 5,
+    availableSizes: [
+      { size: '5 lb', price: 8.00, weightLb: 5 }
+    ],
+    image: '/products/chapati-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Premium whole wheat flour milled specifically for soft, ballooning chapatis and phulkas. Germ and bran are retained intact for superior sweetness and aroma without requiring any dough conditioners.',
+    highlights: [
+      '100% Whole Wheat with germ & natural oils',
+      'Yields exceptionally soft, naturally sweet rotlis',
+      'Milled daily — never sits in warehouse heat',
+      'Free from chemical bleaching and bromates'
+    ],
+    culinaryUses: 'Everyday soft phulka chapatis, layered parathas, and pooris.',
+    shelfLife: 'Best within 2 months in cool airtight pantry.',
+    millingType: 'Specially calibrated fine whole wheat grind'
+  },
+  {
+    id: 'bhakhari-flour',
+    slug: 'bhakhari-flour',
+    name: 'Bhakhari Flour',
+    gujaratiName: 'ભાખરીનો લોટ',
+    hindiName: 'भाखरी का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 8.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 8.00, weightLb: 4 }
+    ],
+    image: '/products/bhakhari-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Coarsely ground whole wheat flour milled to the exact grain consistency needed for crisp, flaky Kathiyawadi and Gujarati bhakharis.',
+    highlights: [
+      'Authentic coarse texture (karkaro lot)',
+      'Provides distinctive crumbly crunch',
+      'Milled daily on traditional stone plates',
+      'Zero refined white flour added'
+    ],
+    culinaryUses: 'Crispy biscuit bhakhari, soft layered bhakhari, and masala bhakhari.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Traditional coarse grind (karkaro)'
+  },
+  {
+    id: 'idli-flour',
+    slug: 'idli-flour',
+    name: 'Idli Flour',
+    gujaratiName: 'ઇડલીનો લોટ',
+    hindiName: 'इडली का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 9.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 9.00, weightLb: 4 }
+    ],
+    image: '/products/idli-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Freshly stoneground rice and urad dal blend, precisely proportioned and textured to produce light, pillowy, cloud-soft steamed idlis.',
+    highlights: [
+      'Pre-balanced rice and urad dal',
+      'Coarse rice granules for spongy porous texture',
+      'Ferments cleanly and consistently',
+      'Saves hours of soaking and wet grinding'
+    ],
+    culinaryUses: 'South Indian steamed idlis, crispy dosas, and uttapams.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Balanced coarse-fine idli texture'
+  },
+  {
+    id: 'dhokla-flour',
+    slug: 'dhokla-flour',
+    name: 'Dhokla Flour',
+    gujaratiName: 'ઢોકળાનો લોટ',
+    hindiName: 'ढोकला का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 9.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 9.00, weightLb: 4 }
+    ],
+    image: '/products/dhokla-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Traditional Gujarati blend of rice and split Bengal gram (chana dal) ground to a coarse granular finish, ideal for white Khatta Dhokla.',
+    highlights: [
+      'Authentic proportion of rice and chana dal',
+      'Granular grit creates authentic spongy honeycomb texture',
+      'Milled fresh to ensure natural fermentation vitality',
+      'No artificial leavening agents added'
+    ],
+    culinaryUses: 'White Khatta Dhokla with green chilies, ginger, and mustard seed tadka.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Semi-coarse granular grind'
+  },
+  {
+    id: 'handvo-flour',
+    slug: 'handvo-flour',
+    name: 'Handvo Flour',
+    gujaratiName: 'હાંડવોનો લોટ',
+    hindiName: 'हांडवो का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 10.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 10.00, weightLb: 4 }
+    ],
+    image: '/products/handvo-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Classic Gujarati multi-lentil and rice flour mix (rice, chana dal, toor dal, urad dal). Ground with the traditional rough texture that yields a crusty outside and moist inside.',
+    highlights: [
+      'Multi-dal & rice nutritious protein power blend',
+      'Coarse stoneground texture essential for crispy sesame crust',
+      'Naturally ferments with yogurt or buttermilk',
+      'Milled fresh in the USA'
+    ],
+    culinaryUses: 'Gujarati baked Handvo vegetable cake with bottle gourd (doodhi), sesame seeds, and curry leaves.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Traditional coarse mixed-dal grind'
+  },
+  {
+    id: 'besan',
+    slug: 'besan',
+    name: 'Besan',
+    gujaratiName: 'ચણાનો લોટ (બેસન)',
+    hindiName: 'बेसन',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 8.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 8.00, weightLb: 4 }
+    ],
+    image: '/products/besan.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Fine stone-milled pure chickpea / gram flour made from 100% de-husked chana dal. Vibrantly aromatic, nutty, and silky smooth.',
+    highlights: [
+      '100% Pure Chana Dal — zero pea flour dilution',
+      'Fine silky texture for smooth batters',
+      'Rich in plant protein and dietary fiber',
+      'Intense fresh nutty fragrance'
+    ],
+    culinaryUses: 'Kadhi, pakoras, cheela, Dhokla, Sev, and Gujarati sweets.',
+    shelfLife: 'Best within 3 months in airtight container.',
+    millingType: 'Silk fine grind'
+  },
+  {
+    id: 'ladu-besan',
+    slug: 'ladu-besan',
+    name: 'Ladu Besan',
+    gujaratiName: 'લાડુ બેસન (કર્કરો)',
+    hindiName: 'लड्डू बेसन (मोटा)',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 8.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 8.00, weightLb: 4 }
+    ],
+    image: '/products/ladu-besan.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Coarse gram flour milled specifically for making traditional Besan ke Ladoo, Magas, and Mohanthal without turning pasty or gummy.',
+    highlights: [
+      'Danedaar coarse consistency for authentic mouthfeel',
+      'Roasts evenly with ghee without sticking',
+      'Pure single-origin chana dal',
+      'Never refined or treated'
+    ],
+    culinaryUses: 'Danedaar Besan Ladoo, Mohanthal, and Magas.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Danedaar coarse grind'
+  },
+  {
+    id: 'wheat-ladu',
+    slug: 'wheat-ladu',
+    name: 'Wheat Ladu',
+    gujaratiName: 'ઘઉંના લાડુનો લોટ',
+    hindiName: 'गेहूं लड्डू का आटा (चूरमा)',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 8.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 8.00, weightLb: 4 }
+    ],
+    image: '/products/wheat-ladu.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Coarse whole wheat flour stone-milled for Churma Ladu and festive sweet dumplings. Milled to the exact coarse grade needed for melt-in-mouth churma.',
+    highlights: [
+      'Ideal coarse crumb for muthiya frying and churma grinding',
+      'Rich nutty wheat aroma',
+      'Milled fresh on order',
+      'No added starch or fillers'
+    ],
+    culinaryUses: 'Gujarati Churma Ladu, Dal Baati Churma, and Kansar.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Coarse churma grade'
+  },
+  {
+    id: 'rice-flour',
+    slug: 'rice-flour',
+    name: 'Rice Flour',
+    gujaratiName: 'ચોખાનો લોટ',
+    hindiName: 'चावल का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 6.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 6.00, weightLb: 4 }
+    ],
+    image: '/products/rice-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Smooth, pristine stone-milled rice flour. Pure white, silky fine, milled cold to maintain clean starch qualities for delicate batters and steamed snacks.',
+    highlights: [
+      'Silky smooth and naturally gluten-free',
+      'Milled from clean premium polished rice',
+      'Creates crisp textures in fried delicacies',
+      'Zero chalkiness'
+    ],
+    culinaryUses: 'Khichu (papdi no lot), Akki Roti, Murukku, Modak dough, and rice rotis.',
+    shelfLife: 'Best within 4 months.',
+    millingType: 'Fine stoneground'
+  },
+  {
+    id: 'ragi-flour',
+    slug: 'ragi-flour',
+    name: 'Ragi Flour',
+    gujaratiName: 'રાગી / નાગલીનો લોટ',
+    hindiName: 'रागी / मडुआ का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 10.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 10.00, weightLb: 4 }
+    ],
+    image: '/products/ragi-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: '100% whole grain Finger Millet (Ragi / Nagli) stone-milled daily. Exceptionally rich in natural calcium and dietary fiber with deep earthy flavor.',
+    highlights: [
+      'One of the richest plant-based sources of calcium',
+      'Low GI, excellent for wholesome nutrition',
+      'Stoneground with outer seed coat intact',
+      '100% single grain, nothing added'
+    ],
+    culinaryUses: 'Ragi rotla / bhakri, ragi dosa, porridge (kanji), and ragi cookies.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Fine whole grain grind'
+  },
+  {
+    id: 'barley-flour',
+    slug: 'barley-flour',
+    name: 'Barley Flour',
+    gujaratiName: 'જવનો લોટ',
+    hindiName: 'जौ का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 10.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 10.00, weightLb: 4 }
+    ],
+    image: '/products/barley-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Freshly milled whole barley (Jau) flour. Cooling, wholesome, and fiber-rich, popular in Ayurvedic kitchens and traditional rotis.',
+    highlights: [
+      'Rich in beta-glucan soluble fiber',
+      'Cooling holistic food properties',
+      'Fresh stone mill aroma',
+      'Natural whole barley grain'
+    ],
+    culinaryUses: 'Barley chapatis (blended with wheat), porridge, sattu blends, and soups.',
+    shelfLife: 'Best within 2 months.',
+    millingType: 'Medium-fine grind'
+  },
+  {
+    id: 'multigrain-flour',
+    slug: 'multigrain-flour',
+    name: 'Multigrain Flour',
+    gujaratiName: 'મલ્ટીગ્રેઇન લોટ',
+    hindiName: 'मल्टीग्रेन आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 12.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [
+      { size: '4 lb', price: 12.00, weightLb: 4 }
+    ],
+    image: '/products/multigrain-flour.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Our signature artisan blend of wheat, pearl millet, sorghum, ragi, and chana dal. Milled in balanced proportions for maximum nutrition and exceptional roti puff.',
+    highlights: [
+      'Custom stoneground master grain blend',
+      'Combines fiber, minerals, and complex carbs',
+      'Rotis remain soft for hours with rich flavor',
+      'Freshly milled every morning'
+    ],
+    culinaryUses: 'Daily multigrain rotis, nutritious parathas, and breakfast crepes.',
+    shelfLife: 'Best within 8 weeks.',
+    millingType: 'Specially calibrated medium-fine multi-grain grind'
+  },
+  {
+    id: 'gota-flour',
+    slug: 'gota-flour',
+    name: 'Gota Flour',
+    gujaratiName: 'ગોટાનો લોટ (ડાકોર ગોટા)',
+    hindiName: 'गोटा का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 0.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [],
+    image: '/products/gota-flour.svg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: true,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Special coarse blend for Dakor na Gota (traditional spiced Gujarati fritters). Coming soon to our daily mill lineup.',
+    highlights: ['Traditional spiced fritter blend', 'Coarse texture for spongy golden gota'],
+    culinaryUses: 'Dakor na Gota.',
+    shelfLife: 'Coming soon',
+    millingType: 'Coarse specialty blend'
+  },
+  {
+    id: 'khaman-flour',
+    slug: 'khaman-flour',
+    name: 'Khaman Flour',
+    gujaratiName: 'ખમણનો લોટ (નાયલોન)',
+    hindiName: 'खमण का आटा',
+    category: 'flours',
+    categoryName: 'Flours',
+    price: 0.00,
+    size: '4 lb',
+    weightLb: 4,
+    availableSizes: [],
+    image: '/products/khaman-flour.svg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: true,
+    stoneground: true,
+    milledDaily: true,
+    description: 'Pure gram flour calibrated for instant spongy yellow Nylon Khaman. Coming soon.',
+    highlights: ['Extra fine silk sift', 'Maximum aeration and juice absorption'],
+    culinaryUses: 'Surati Nylon Khaman.',
+    shelfLife: 'Coming soon',
+    millingType: 'Fine specialty grind'
+  },
+
+  // ================= WHOLE GRAINS =================
+  {
+    id: 'bajri-whole',
+    slug: 'bajri-whole',
+    name: 'Bajri Whole',
+    gujaratiName: 'આખી બાજરી',
+    hindiName: 'साबुत बाजरा',
+    category: 'grains',
+    categoryName: 'Grains',
+    price: 40.00,
+    size: '20 lb',
+    weightLb: 20,
+    availableSizes: [
+      { size: '20 lb', price: 40.00, weightLb: 20 }
+    ],
+    image: '/products/bajri-whole.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: false,
+    milledDaily: false,
+    description: 'Whole pearl millet grain, thoroughly triple-cleaned and sorted. Keep it as whole grain and send it back to us to mill when you need it, or mill at home.',
+    highlights: [
+      'Triple-cleaned and stone-free',
+      'Whole uncracked pearl millet berries',
+      'Long storage life as whole grain',
+      'Can be custom milled or stored for winter consumption'
+    ],
+    culinaryUses: 'Whole grain khichdi, home flour milling, or sprouted grain dishes.',
+    shelfLife: 'Over 12 months when stored dry and sealed.',
+    millingType: 'Whole clean grain'
+  },
+  {
+    id: 'juwar-whole',
+    slug: 'juwar-whole',
+    name: 'Juwar Whole',
+    gujaratiName: 'આખી જુવાર',
+    hindiName: 'साबुत ज्वार',
+    category: 'grains',
+    categoryName: 'Grains',
+    price: 40.00,
+    size: '20 lb',
+    weightLb: 20,
+    availableSizes: [
+      { size: '20 lb', price: 40.00, weightLb: 20 }
+    ],
+    image: '/products/juwar-whole.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: false,
+    milledDaily: false,
+    description: 'Whole white sorghum grain, carefully cleaned of chaff and dust. Plump kernels ready for storage, popping, or batch milling.',
+    highlights: [
+      'Pristine white sorghum kernels',
+      'Zero additives or grain glazes',
+      'Bulk 20 lb bag for economy and freshness',
+      'Triple machine cleaned'
+    ],
+    culinaryUses: 'Juwar khichdi, popping like popcorn (dhani), or home milling.',
+    shelfLife: 'Over 12 months.',
+    millingType: 'Whole clean grain'
+  },
+  {
+    id: 'wheat-whole',
+    slug: 'wheat-whole',
+    name: 'Wheat Whole',
+    gujaratiName: 'આખા ઘઉં',
+    hindiName: 'साबुत गेहूं',
+    category: 'grains',
+    categoryName: 'Grains',
+    price: 40.00,
+    size: '20 lb',
+    weightLb: 20,
+    availableSizes: [
+      { size: '20 lb', price: 40.00, weightLb: 20 }
+    ],
+    image: '/products/wheat-whole.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: false,
+    milledDaily: false,
+    description: 'Premium whole wheat berry grain. Thoroughly cleaned, golden, plump wheat berries with high protein and sweet endosperm.',
+    highlights: [
+      'Golden whole wheat berries',
+      'Triple cleaned, ready for storage or stone milling',
+      'Provides sweet, aromatic atta when freshly ground',
+      '20 lb sturdy bag packaging'
+    ],
+    culinaryUses: 'Home stone milling, wheat berry salads, fada ni khichdi, or Dalia.',
+    shelfLife: 'Over 12 months.',
+    millingType: 'Whole clean grain'
+  },
+  {
+    id: 'ragi-whole',
+    slug: 'ragi-whole',
+    name: 'Ragi Whole',
+    gujaratiName: 'આખી રાગી / નાગલી',
+    hindiName: 'साबुत रागी',
+    category: 'grains',
+    categoryName: 'Grains',
+    price: 40.00,
+    size: '20 lb',
+    weightLb: 20,
+    availableSizes: [
+      { size: '20 lb', price: 40.00, weightLb: 20 }
+    ],
+    image: '/products/ragi-whole.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: false,
+    milledDaily: false,
+    description: 'Whole finger millet (nagli/ragi) seeds. Deep reddish-brown, cleaned, and packed with calcium and ancient vitality.',
+    highlights: [
+      'Cleaned whole finger millet seeds',
+      'Ideal for sprouting to boost bioavailable iron and malt',
+      'Non-GMO ancient crop',
+      '20 lb economical pack'
+    ],
+    culinaryUses: 'Sprouted ragi malt for children and elderly, home milling, or ragi porridge.',
+    shelfLife: 'Over 12 months.',
+    millingType: 'Whole clean grain'
+  },
+  {
+    id: 'barley-whole',
+    slug: 'barley-whole',
+    name: 'Barley Whole',
+    gujaratiName: 'આખા જવ',
+    hindiName: 'साबुत जौ',
+    category: 'grains',
+    categoryName: 'Grains',
+    price: 4.00,
+    size: '2 lb',
+    weightLb: 2,
+    availableSizes: [
+      { size: '2 lb', price: 4.00, weightLb: 2 }
+    ],
+    image: '/products/barley-whole.jpg',
+    isPickupOnly: false,
+    isOutOfStock: false,
+    isComingSoon: false,
+    stoneground: false,
+    milledDaily: false,
+    description: 'Cleaned whole barley grain. High soluble fiber, mild nutty flavor, excellent for wholesome boiling and water preparations.',
+    highlights: [
+      'Clean whole grain barley',
+      'Convenient 2 lb bag',
+      'Traditional cooling grain',
+      'High in digestive fiber'
+    ],
+    culinaryUses: 'Barley water (jau ka paani), hearty soups, and whole grain khichdi.',
+    shelfLife: 'Over 12 months.',
+    millingType: 'Whole clean grain'
+  },
+
+  // ================= SNACKS (Pickup Only) =================
+  {
+    id: 'methi-khakhara',
+    slug: 'methi-khakhara',
+    name: 'Methi Khakhara',
+    gujaratiName: 'મેથી ખાખરા',
+    hindiName: 'मेथी खाखरा',
+    category: 'snacks',
+    categoryName: 'Snacks',
+    price: 5.00,
+    size: '500 g',
+    weightLb: 1.1,
+    availableSizes: [
+      { size: '500 g', price: 5.00, weightLb: 1.1 }
+    ],
+    image: '/products/methi-khakhara.svg',
+    isPickupOnly: true,
+    isOutOfStock: true,
+    isComingSoon: false,
+    description: 'Traditional Gujarati thin, crispy roasted wheat flatbread seasoned with fragrant fenugreek leaves (methi) and mild spices.',
+    highlights: ['Crisp hand-pressed flatbread', 'Fragrant kasuri methi seasoning', 'Pickup in store only'],
+    culinaryUses: 'Morning breakfast with masala chai, ghee, or mango pickle.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Roasted thin crispbread'
+  },
+  {
+    id: 'jeera-khakhara',
+    slug: 'jeera-khakhara',
+    name: 'Jeera Khakhara',
+    gujaratiName: 'જીરું ખાખરા',
+    hindiName: 'जीरा खाखरा',
+    category: 'snacks',
+    categoryName: 'Snacks',
+    price: 5.00,
+    size: '500 g',
+    weightLb: 1.1,
+    availableSizes: [
+      { size: '500 g', price: 5.00, weightLb: 1.1 }
+    ],
+    image: '/products/jeera-khakhara.svg',
+    isPickupOnly: true,
+    isOutOfStock: true,
+    isComingSoon: false,
+    description: 'Crispy roasted whole wheat khakhara sprinkled with fragrant toasted cumin seeds (jeera) and black pepper.',
+    highlights: ['Toasted whole cumin flavor', 'Light digestive snack', 'Pickup in store only'],
+    culinaryUses: 'Teatime accompaniment with chai and chutney.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Roasted thin crispbread'
+  },
+  {
+    id: 'masala-khakhara',
+    slug: 'masala-khakhara',
+    name: 'Masala Khakhara',
+    gujaratiName: 'મસાલા ખાખરા',
+    hindiName: 'मसाला खाखरा',
+    category: 'snacks',
+    categoryName: 'Snacks',
+    price: 5.00,
+    size: '500 g',
+    weightLb: 1.1,
+    availableSizes: [
+      { size: '500 g', price: 5.00, weightLb: 1.1 }
+    ],
+    image: '/products/masala-khakhara.svg',
+    isPickupOnly: true,
+    isOutOfStock: true,
+    isComingSoon: false,
+    description: 'Spicy Gujarati roasted khakhara layered with turmeric, red chili, and authentic Kathiyawadi spices.',
+    highlights: ['Zesty aromatic spice coat', 'Slowly roasted on tawa', 'Pickup in store only'],
+    culinaryUses: 'Crunchy snack with curd or tea.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Roasted thin crispbread'
+  },
+  {
+    id: 'soya-stick',
+    slug: 'soya-stick',
+    name: 'Soya Stick',
+    gujaratiName: 'સોયા સ્ટીક',
+    hindiName: 'सोया स्टिक',
+    category: 'snacks',
+    categoryName: 'Snacks',
+    price: 4.50,
+    size: '500 g',
+    weightLb: 1.1,
+    availableSizes: [
+      { size: '500 g', price: 4.50, weightLb: 1.1 }
+    ],
+    image: '/products/soya-stick.svg',
+    isPickupOnly: true,
+    isOutOfStock: true,
+    isComingSoon: false,
+    description: 'Crispy, crunchy spiced protein-rich snack sticks seasoned with tangy chaat spices.',
+    highlights: ['Crispy savory texture', 'Tangy spice blend', 'Pickup in store only'],
+    culinaryUses: 'Evening crunchy snack.',
+    shelfLife: 'Best within 3 months.',
+    millingType: 'Crisp savory snack'
+  },
+
+  // ================= MAMRA (Pickup Only) =================
+  {
+    id: 'basmati-mamra',
+    slug: 'basmati-mamra',
+    name: 'Basmati Mamra',
+    gujaratiName: 'બાસમતી મમરા',
+    hindiName: 'बासमती मुरमुरा',
+    category: 'mamra',
+    categoryName: 'Mamra',
+    price: 2.00,
+    size: '400 g',
+    weightLb: 0.9,
+    availableSizes: [
+      { size: '400 g', price: 2.00, weightLb: 0.9 }
+    ],
+    image: '/products/basmati-mamra.jpg',
+    isPickupOnly: true,
+    isOutOfStock: false,
+    isComingSoon: false,
+    description: 'Ultra-light, extra crisp puffed grains made from aromatic long-grain Basmati rice. Free from sand, dirt, or moisture.',
+    highlights: [
+      'Puffed from aromatic Basmati rice',
+      'Extra crunchy and snow-white',
+      'Ultra light & delicate — Pickup in store only',
+      'Zero oil or artificial puffing gas'
+    ],
+    culinaryUses: 'Bhel Puri, Sukha Bhel, Vagharela Mamra, and tea-time snacks.',
+    shelfLife: 'Store in airtight tin away from moisture.',
+    millingType: 'Hot air puffed grain'
+  },
+  {
+    id: 'kolhapuri-mamra',
+    slug: 'kolhapuri-mamra',
+    name: 'Kolhapuri Mamra',
+    gujaratiName: 'કોલ્હાપુરી મમરા',
+    hindiName: 'कोल्हापुरी मुरमुरा',
+    category: 'mamra',
+    categoryName: 'Mamra',
+    price: 3.00,
+    size: '400 g',
+    weightLb: 0.9,
+    availableSizes: [
+      { size: '400 g', price: 3.00, weightLb: 0.9 }
+    ],
+    image: '/products/kolhapuri-mamra.jpg',
+    isPickupOnly: true,
+    isOutOfStock: false,
+    isComingSoon: false,
+    description: 'Signature thick, crunchy Kolhapuri-style puffed rice. Holds its crunch exceptionally well even after tempering with spices and peanuts.',
+    highlights: [
+      'Hearty, thick puff that resists getting soggy',
+      'Essential for authentic Kolhapuri bhadang',
+      'Pickup in store only'
+    ],
+    culinaryUses: 'Kolhapuri Bhadang with garlic, roasted peanuts, and chili oil.',
+    shelfLife: 'Store in airtight tin.',
+    millingType: 'Traditional thick puffed grain'
+  },
+  {
+    id: 'bajri-mamra',
+    slug: 'bajri-mamra',
+    name: 'Bajri Mamra',
+    gujaratiName: 'બાજરીના મમરા',
+    hindiName: 'बाजरा मुरमुरा',
+    category: 'mamra',
+    categoryName: 'Mamra',
+    price: 3.00,
+    size: '400 g',
+    weightLb: 0.9,
+    availableSizes: [
+      { size: '400 g', price: 3.00, weightLb: 0.9 }
+    ],
+    image: '/products/bajri-mamra.jpg',
+    isPickupOnly: true,
+    isOutOfStock: false,
+    isComingSoon: false,
+    description: 'Puffed whole pearl millet (bajri). Light, crispy, healthy, and high in fiber with deep roasted millet notes.',
+    highlights: [
+      'Gluten-free puffed pearl millet',
+      'Nutritious alternative to rice mamra',
+      'Pickup in store only'
+    ],
+    culinaryUses: 'Roasted diet chivda with curry leaves and turmeric.',
+    shelfLife: 'Store in airtight container.',
+    millingType: 'Puffed whole millet'
+  },
+  {
+    id: 'juwar-mamra',
+    slug: 'juwar-mamra',
+    name: 'Juwar Mamra',
+    gujaratiName: 'જુવારના મમરા',
+    hindiName: 'ज्वार मुरमुरा',
+    category: 'mamra',
+    categoryName: 'Mamra',
+    price: 3.00,
+    size: '400 g',
+    weightLb: 0.9,
+    availableSizes: [
+      { size: '400 g', price: 3.00, weightLb: 0.9 }
+    ],
+    image: '/products/juwar-mamra.jpg',
+    isPickupOnly: true,
+    isOutOfStock: false,
+    isComingSoon: false,
+    description: 'Puffed whole white sorghum (juwar) grains. Mild, crisp, gluten-free, and ideal for healthy snacking.',
+    highlights: [
+      '100% Sorghum puffed naturally',
+      'Crispy, light, low calorie snack',
+      'Pickup in store only'
+    ],
+    culinaryUses: 'Vagharela Juwar Mamra with peanuts and roasted gram.',
+    shelfLife: 'Store in airtight container.',
+    millingType: 'Puffed sorghum grain'
+  },
+  {
+    id: 'juwar-dhani',
+    slug: 'juwar-dhani',
+    name: 'Juwar Dhani',
+    gujaratiName: 'જુવારની ધાણી',
+    hindiName: 'ज्वार की धानी',
+    category: 'mamra',
+    categoryName: 'Mamra',
+    price: 3.00,
+    size: '400 g',
+    weightLb: 0.9,
+    availableSizes: [
+      { size: '400 g', price: 3.00, weightLb: 0.9 }
+    ],
+    image: '/products/juwar-dhani.jpg',
+    isPickupOnly: true,
+    isOutOfStock: false,
+    isComingSoon: false,
+    description: 'Traditional popped tender sorghum popcorn (juwar dhani). Delicate little white popped florets, sacred for Holi and beloved for light digestive snacking.',
+    highlights: [
+      'Mini sorghum popcorn, naturally popped',
+      'Traditional delicacy for festivals and wholesome snacks',
+      'Zero kernel hulls sticking in teeth',
+      'Pickup in store only'
+    ],
+    culinaryUses: 'Roasted with a touch of ghee, turmeric, salt, and hing, or eaten plain.',
+    shelfLife: 'Store in airtight container.',
+    millingType: 'Popped tender grain'
+  }
+];
+
+export const BUSINESS_INFO = {
+  name: 'The Fresh Flours',
+  tagline: 'Fresh flour, milled daily in the USA.',
+  subtagline: 'Bajri, jowar, nagli, wheat and rice — milled fresh and delivered to your door.',
+  phone: '+1 (423) 664-3353',
+  phoneRaw: '4236643353',
+  zelleNumber: '423-664-3353',
+  zelleRecipient: 'Pratik Patel',
+  email: 'info@thefreshflours.com',
+  address: 'Chattanooga / Cleveland Area, TN, USA',
+  hours: 'Monday – Saturday: 9:00 AM – 6:00 PM EST',
+  boxCapacityLb: 40,
+  cardProcessingFeePercent: 3.0,
+  pickupDiscount: 'Free store pickup available at checkout',
+};
